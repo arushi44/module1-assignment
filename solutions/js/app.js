@@ -22,14 +22,14 @@ angular.module("LunchCheck", [])
 		}
 
 		function buildMessage(num) {
-    		if (num === 0) {
-      			return 'Please enter data first';
-    		}
-    		else if (num <= 3) {
-      			return 'Enjoy!';
-    		} else {
-      			return 'Too much!';
-    		}
+    			if (num === 0) {
+      				return 'Please enter data first';
+    			}
+    			else if (num <= 3) {
+      				return 'Enjoy!';
+    			} else {
+      				return 'Too much!';
+    			}
   		}
 	}
 })
