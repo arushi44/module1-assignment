@@ -2,7 +2,7 @@
 'use strict';
 
 angular.module("LunchCheck", [])
-	.controller("LunchCheckController", function($scope){
+	.controller("LunchCheckController",function LunchCheckController($scope){
 		$scope.checkDishes = function () {
         		var num = countDishes($scope.dishes);
     			$scope.message = buildMessage(num);
