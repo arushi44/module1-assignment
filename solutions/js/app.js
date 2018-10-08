@@ -2,7 +2,7 @@
 'use strict';
 
 angular.module("LunchCheck", [])
-	.controller("LunchCheckController", function($scope)){
+	.controller("LunchCheckController", function($scope){
 		$scope.checkDishes = function () {
         	var num = countDishes($scope.dishes);
     		$scope.message = buildMessage(num);
@@ -16,10 +16,10 @@ angular.module("LunchCheck", [])
         			if (array[idx].trim().length != 0) {
           				count++;
         			}
-  				}
+  			}
     		}    
 			return count;
-		}
+	}
 
 		function buildMessage(num) {
     			if (num === 0) {
@@ -31,5 +31,5 @@ angular.module("LunchCheck", [])
       				return 'Too much!';
     			}
   		}
-	}
+	)}
 })
