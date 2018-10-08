@@ -4,22 +4,22 @@
 angular.module("LunchCheck", [])
 	.controller("LunchCheckController", function($scope){
 		$scope.checkDishes = function () {
-        	var num = countDishes($scope.dishes);
-    		$scope.message = buildMessage(num);
+        		var num = countDishes($scope.dishes);
+    			$scope.message = buildMessage(num);
  		};
 
-    	function countDishes(dishes) {
-    		var count = 0;
-    		if (dishes) {
-      			var array = dishes.split(',');
-      			for (var idx in array) {
-        			if (array[idx].trim().length != 0) {
-          				count++;
-        			}
-  			}
-    		}    
+    		function countDishes(dishes) {
+    			var count = 0;
+    			if (dishes) {
+      				var array = dishes.split(',');
+      				for (var idx in array) {
+        				if (array[idx].trim().length != 0) {
+          					count++;
+        				}
+  				}
+    			}    
 			return count;
-	}
+		}
 
 		function buildMessage(num) {
     			if (num === 0) {
